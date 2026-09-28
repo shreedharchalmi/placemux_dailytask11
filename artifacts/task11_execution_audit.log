@@ -1,0 +1,36 @@
+2026-09-28 17:04:37,822 [INFO] Executing defensive unit tests for pipeline edge cases...
+2026-09-28 17:04:37,823 [INFO] Unit Test 1 Passed: Empty DataFrame caught successfully.
+2026-09-28 17:04:37,824 [INFO] Unit Test 2 Passed: Mismatched dimensions caught successfully.
+2026-09-28 17:04:37,825 [INFO] Unit Test 3 Passed: Single-class anomaly caught successfully.
+2026-09-28 17:04:37,825 [INFO] All edge-case unit tests completed successfully.
+
+2026-09-28 17:04:37,825 [INFO] Starting Task 11: Ensemble Learning Pipeline
+2026-09-28 17:04:37,877 [INFO] Data split successfully: Dev Set=483, Test Set=86
+2026-09-28 17:04:37,878 [INFO] Computing out-of-fold probability predictions for Logistic_Regression...
+2026-09-28 17:04:37,910 [INFO] Computing out-of-fold probability predictions for Random_Forest...
+2026-09-28 17:04:38,647 [INFO] Computing out-of-fold probability predictions for Gradient_Boosting...
+2026-09-28 17:04:40,466 [INFO] 
+Model Prediction Diversity Matrix (Pearson Correlation):
+                     Logistic_Regression  Random_Forest  Gradient_Boosting
+Logistic_Regression             1.000000       0.973319           0.967654
+Random_Forest                   0.973319       1.000000           0.979459
+Gradient_Boosting               0.967654       0.979459           1.000000
+
+2026-09-28 17:04:41,656 [INFO] Fitting and scoring: Logistic_Regression
+2026-09-28 17:04:41,686 [INFO] Fitting and scoring: Random_Forest
+2026-09-28 17:04:41,845 [INFO] Fitting and scoring: Gradient_Boosting
+2026-09-28 17:04:42,229 [INFO] Fitting and scoring: Soft_Voting_Ensemble
+2026-09-28 17:04:42,740 [INFO] Fitting and scoring: Stacking_Classifier
+2026-09-28 17:04:45,196 [INFO] 
+Final Comparative Test Evaluation:
+                      test_accuracy  recall_malignant_class0  roc_auc_score  false_negatives  inference_latency_ms_per_sample
+Logistic_Regression        0.953488                  0.96875       0.994213              1.0                           0.0233
+Random_Forest              0.930233                  0.93750       0.991319              2.0                           0.0465
+Gradient_Boosting          0.965116                  0.93750       0.990741              2.0                           0.1395
+Soft_Voting_Ensemble       0.953488                  0.93750       0.991319              2.0                           0.1512
+Stacking_Classifier        0.953488                  0.93750       0.991898              2.0                           0.2325
+
+2026-09-28 17:04:45,308 [INFO] Saved Voting Ensemble artifact to artifacts/task11_ensemble_model.joblib
+2026-09-28 17:04:45,308 [INFO] Saved complete metrics dictionary to artifacts/task11_metrics.json
+2026-09-28 17:04:45,308 [INFO] Diagnostic plots saved to artifacts/model_diversity_correlation.png and artifacts/ensemble_roc_curves.png
+2026-09-28 17:04:45,309 [INFO] Task 11 completed successfully.

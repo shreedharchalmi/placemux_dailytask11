@@ -1,0 +1,52 @@
+{
+  "Logistic_Regression": {
+    "test_accuracy": 0.9534883720930233,
+    "recall_malignant_class0": 0.96875,
+    "precision_malignant_class0": 0.9117647058823529,
+    "f1_score_weighted": 0.9537543047854589,
+    "roc_auc_score": 0.994212962962963,
+    "false_negatives": 1,
+    "false_positives": 3,
+    "inference_latency_ms_per_sample": 0.0233
+  },
+  "Random_Forest": {
+    "test_accuracy": 0.9302325581395349,
+    "recall_malignant_class0": 0.9375,
+    "precision_malignant_class0": 0.8823529411764706,
+    "f1_score_weighted": 0.9306314571781882,
+    "roc_auc_score": 0.9913194444444444,
+    "false_negatives": 2,
+    "false_positives": 4,
+    "inference_latency_ms_per_sample": 0.0465
+  },
+  "Gradient_Boosting": {
+    "test_accuracy": 0.9651162790697675,
+    "recall_malignant_class0": 0.9375,
+    "precision_malignant_class0": 0.967741935483871,
+    "f1_score_weighted": 0.9649994412102371,
+    "roc_auc_score": 0.9907407407407407,
+    "false_negatives": 2,
+    "false_positives": 1,
+    "inference_latency_ms_per_sample": 0.1395
+  },
+  "Soft_Voting_Ensemble": {
+    "test_accuracy": 0.9534883720930233,
+    "recall_malignant_class0": 0.9375,
+    "precision_malignant_class0": 0.9375,
+    "f1_score_weighted": 0.9534883720930233,
+    "roc_auc_score": 0.9913194444444444,
+    "false_negatives": 2,
+    "false_positives": 2,
+    "inference_latency_ms_per_sample": 0.1512
+  },
+  "Stacking_Classifier": {
+    "test_accuracy": 0.9534883720930233,
+    "recall_malignant_class0": 0.9375,
+    "precision_malignant_class0": 0.9375,
+    "f1_score_weighted": 0.9534883720930233,
+    "roc_auc_score": 0.9918981481481481,
+    "false_negatives": 2,
+    "false_positives": 2,
+    "inference_latency_ms_per_sample": 0.2325
+  }
+}
